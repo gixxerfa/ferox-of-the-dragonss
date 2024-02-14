@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class attack : MonoBehaviour
 {
-    
+    public bool e1, e2, e3, e4, e5, e6;
     
     
     // Start is called before the first frame update
@@ -21,6 +21,9 @@ public class attack : MonoBehaviour
 
     public void buttonPressed()
     {
+     if(e1 == true)
+        {
 
+        }
     }
 }
