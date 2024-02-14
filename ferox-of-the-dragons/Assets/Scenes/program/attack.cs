@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class attack : MonoBehaviour
+
+public class attack : Healthhh
 {
     public bool e1, e2, e3, e4, e5, e6;
+    
     
     
     // Start is called before the first frame update
@@ -23,7 +25,7 @@ public class attack : MonoBehaviour
     {
      if(e1 == true)
         {
-
+            
         }
     }
 }

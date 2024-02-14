@@ -12,4 +12,9 @@ public class Healthhh : MonoBehaviour
     {
         
     }
+    public virtual void TakeDamage(int _damage)
+    {
+        HP -= _damage;
+
+    }
 }
