@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class attack : MonoBehaviour
 {
+    
+    
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +17,10 @@ public class attack : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void buttonPressed()
+    {
+
     }
 }
