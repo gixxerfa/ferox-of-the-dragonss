@@ -4,17 +4,10 @@ using UnityEngine;
 
 public class Healthhh : MonoBehaviour
 {
-    public int HP;
+    public int _health;
 
-
-    // Update is called once per frame
-    void Update()
+    public Healthhh(int _health)
     {
-        
-    }
-    public virtual void TakeDamage(int _damage)
-    {
-        HP -= _damage;
 
     }
 }
