@@ -1470,7 +1470,7 @@ GameObject:
   - component: {fileID: 1598302520}
   - component: {fileID: 1598302519}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1794,7 +1794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbefce0968cd6234ba8529d453809b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 0
   e1: 0
   e2: 0
   e3: 0
