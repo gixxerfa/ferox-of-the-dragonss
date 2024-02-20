@@ -8,7 +8,7 @@ public class battlecontroll : MonoBehaviour
     public Texture3D playsprite;
     public Texture3D enemysprite;
 
-    public ani
+   
 
 
 
