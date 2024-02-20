@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class Healthhh : MonoBehaviour
 {
-    public int _health;
+    public int hp;
+    public int maxhp;
 
-    public Healthhh(int _health)
+   
+    
+    
+    public virtual void TakeDamage(int _damage)
     {
+        hp -= _damage;
 
+    }
+    public virtual void start()
+    {
+        hp = maxhp;
     }
 }
