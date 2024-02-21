@@ -8,8 +8,9 @@ public class battlecontroll : Healthhh
 {
 
     public battlestate state;
-   
 
+    Unit playerunit;
+    Unit enemyunit;
     
 
     
@@ -37,8 +38,16 @@ public class battlecontroll : Healthhh
 
    IEnumerator PlayerAtack()
     {
-        
+         
+       
         yield return new WaitForSeconds(2f);
+
+    }
+    IEnumerator enemyturn()
+    {
+        yield return new WaitForSeconds(1f);
+        
+
 
     }
     
