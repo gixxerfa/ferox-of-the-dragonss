@@ -4,15 +4,15 @@ using UnityEngine;
 
 public enum battlestate { start, playerturn, enemyturn, won, lost}
 
-public class battlecontroll : MonoBehaviour
+public class battlecontroll : Healthhh
 {
 
     public battlestate state;
-    public GameObject playerprefab;
-    public GameObject enemyprefab;
+   
 
-    public Transform PLayerBattleStation;
-    public Transform EnemyBattleStation;
+    
+
+    
 
     void Start()
     {
@@ -25,8 +25,9 @@ public class battlecontroll : MonoBehaviour
 
     public IEnumerator setupBattle()
     {
-        Instantiate(playerprefab, PLayerBattleStation);
-        Instantiate(enemyprefab, EnemyBattleStation);
+      
+
+        
 
         yield return new WaitForSeconds(2f);
         
@@ -34,8 +35,23 @@ public class battlecontroll : MonoBehaviour
         PLayerturn();
     }
 
+   IEnumerator PlayerAtack()
+    {
+        
+        yield return new WaitForSeconds(2f);
+
+    }
+    
     public void PLayerturn()
     {
+
+    }
+    public void OnAttackButton()
+    {
+        if (state != battlestate.playerturn)
+            return;
+
+        StartCoroutine(PlayerAtack());
 
     }
 

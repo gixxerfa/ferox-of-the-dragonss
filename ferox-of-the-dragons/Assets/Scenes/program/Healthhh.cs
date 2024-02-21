@@ -13,6 +13,10 @@ public class Healthhh : MonoBehaviour
     public virtual void TakeDamage(int _damage)
     {
         hp -= _damage;
+        if(hp <= 0)
+        {
+            Destroy(gameObject);
+        }
 
     }
     public virtual void start()

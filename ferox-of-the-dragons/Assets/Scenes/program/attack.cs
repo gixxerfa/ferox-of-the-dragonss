@@ -24,7 +24,7 @@ public class attack : MonoBehaviour
 
     public void buttonPressed()
     {
-        atackmeny.GetComponent<Canvas>().enabled = true;
-        mainmeny.GetComponent<Canvas>().enabled = false;
+        //atackmeny.GetComponent<Canvas>().enabled = true;
+       // mainmeny.GetComponent<Canvas>().enabled = false;
     }
 }
