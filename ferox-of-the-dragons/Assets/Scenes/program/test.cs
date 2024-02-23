@@ -15,4 +15,8 @@ public class test : Healthhh
     {
         
     }
+    public void Hurt()
+    {
+        //TakeDamage(5);
+    }
 }
