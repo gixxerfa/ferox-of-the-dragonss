@@ -1,13 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class scene_combat_test : MonoBehaviour
 {
+    public bool fl;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        fl = false;
     }
 
     // Update is called once per frame
@@ -19,9 +22,10 @@ public class scene_combat_test : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if(other.CompareTag("Player") && fl == false)
         {
-            print("scene_combat");
+            SceneManager.LoadScene("combat_test");
+            fl = true;
         }
     }
 }

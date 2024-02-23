@@ -714,8 +714,9 @@ GameObject:
   - component: {fileID: 928787070}
   - component: {fileID: 928787069}
   - component: {fileID: 928787068}
+  - component: {fileID: 928787072}
   m_Layer: 0
-  m_Name: Cube (4)
+  m_Name: enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -799,6 +800,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &928787072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 928787067}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba2227899f1340646b6d53aa29bea5c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxhp: 20
 --- !u!1 &1074337061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1469,6 +1484,7 @@ GameObject:
   - component: {fileID: 1598302521}
   - component: {fileID: 1598302520}
   - component: {fileID: 1598302519}
+  - component: {fileID: 1598302523}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -1554,6 +1570,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598302523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598302518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba072e8ea036cd438c873a878cb1d7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 0
+  maxhp: 0
+  state: 0
+  ts: {fileID: 0}
 --- !u!1 &1626257140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,8 +1784,8 @@ GameObject:
   - component: {fileID: 1709051180}
   - component: {fileID: 1709051184}
   - component: {fileID: 1709051183}
-  - component: {fileID: 1709051185}
   - component: {fileID: 1709051182}
+  - component: {fileID: 1709051185}
   - component: {fileID: 1709051181}
   m_Layer: 5
   m_Name: attack
@@ -1847,9 +1879,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1709051181}
-        m_TargetAssemblyTypeName: attack, Assembly-CSharp
-        m_MethodName: buttonPressed
+      - m_Target: {fileID: 1709051185}
+        m_TargetAssemblyTypeName: battlecontroll, Assembly-CSharp
+        m_MethodName: OnAttackButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1910,8 +1942,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 0
-  maxhp: 0
+  maxhp: 20
   state: 0
+  ts: {fileID: 928787072}
 --- !u!1 &2091718266
 GameObject:
   m_ObjectHideFlags: 0

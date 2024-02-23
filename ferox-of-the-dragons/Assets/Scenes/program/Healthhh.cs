@@ -15,7 +15,8 @@ public class Healthhh : MonoBehaviour
         hp -= _damage;
         if(hp <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            Debug.Log("ITWORK");
         }
 
     }

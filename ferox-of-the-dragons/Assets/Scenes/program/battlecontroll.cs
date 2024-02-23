@@ -41,10 +41,10 @@ public class battlecontroll : Healthhh
 
    IEnumerator PlayerAtack()
     {
-        TakeDamage(5);
+        
        
         yield return new WaitForSeconds(2f);
-        //ts.Hurt();
+        ts.Hurt();
        StartCoroutine( enemyturn());
 
     }
