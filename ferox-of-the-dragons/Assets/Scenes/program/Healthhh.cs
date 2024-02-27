@@ -18,7 +18,7 @@ public class Healthhh : MonoBehaviour
             //Destroy(gameObject);
             Debug.Log("ITWORK");
         }
-
+        
     }
     public virtual void start()
     {

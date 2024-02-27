@@ -14,6 +14,7 @@ public class battlecontroll : Healthhh
     Unit playerunit;
     Unit enemyunit;
   public test ts;
+    public player PL;
 
     
 
@@ -45,22 +46,26 @@ public class battlecontroll : Healthhh
        
         yield return new WaitForSeconds(2f);
         ts.Hurt();
+        state = battlestate.enemyturn;
        StartCoroutine( enemyturn());
 
     }
     IEnumerator enemyturn()
     {
-        TakeDamage(5);
+        if (state == battlestate.enemyturn)
+            
+        //TakeDamage(5);
         
-        yield return new WaitForSeconds(1f);
-        
-
+        yield return new WaitForSeconds(2f);
+        PL.PlayerHurt();
+        PLayerturn();
 
     }
     
     public void PLayerturn()
     {
-
+        state = battlestate.playerturn;
+        OnAttackButton();
     }
     public void OnAttackButton()
     {
