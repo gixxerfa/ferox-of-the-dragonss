@@ -10,6 +10,7 @@ public class battlecontroll : Healthhh
 
     public battlestate state;
     public Button OnAttackButto;
+    public GameObject canvas;
 
     Unit playerunit;
     Unit enemyunit;
@@ -21,6 +22,7 @@ public class battlecontroll : Healthhh
     void Start()
     {
         hp = maxhp;
+    //  canvas = gameObject.findgameobjectwithTag("button");
         state = battlestate.start;
         StartCoroutine(setupBattle());
     }
@@ -37,12 +39,13 @@ public class battlecontroll : Healthhh
         yield return new WaitForSeconds(2f);
         
         state = battlestate.playerturn;
-        PLayerturn();
+        OnAttackButton();
     }
 
    IEnumerator PlayerAtack()
     {
-        
+        //tton MyButton = canvas.GetComponent<Button>();
+      //MyButton.intera
        
         yield return new WaitForSeconds(2f);
         ts.Hurt();
@@ -58,7 +61,8 @@ public class battlecontroll : Healthhh
         
         yield return new WaitForSeconds(2f);
         PL.PlayerHurt();
-        PLayerturn();
+        // PLayerturn();
+        state = battlestate.playerturn;
 
     }
     

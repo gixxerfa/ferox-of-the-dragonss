@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class player :Healthhh
 {
-   
+    
+
     
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,13 @@ public class player :Healthhh
 
     public void PlayerHurt()
     {
-        TakeDamage(5);
+        
 
         print("Playerhurt");
-
+       
+        
+            TakeDamage(2);
+        
 
     }
 }

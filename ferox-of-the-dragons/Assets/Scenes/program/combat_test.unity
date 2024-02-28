@@ -1488,7 +1488,7 @@ GameObject:
   - component: {fileID: 1598302524}
   m_Layer: 0
   m_Name: player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1586,6 +1586,7 @@ MonoBehaviour:
   hp: 0
   maxhp: 0
   state: 0
+  canvas: {fileID: 0}
   ts: {fileID: 928787072}
   PL: {fileID: 1598302524}
 --- !u!114 &1598302524
@@ -1960,6 +1961,7 @@ MonoBehaviour:
   hp: 0
   maxhp: 20
   state: 0
+  canvas: {fileID: 0}
   ts: {fileID: 928787072}
   PL: {fileID: 1598302524}
 --- !u!1 &2091718266
