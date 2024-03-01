@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 
 public enum battlestate { start, playerturn, enemyturn, won, lost}
 
@@ -11,6 +11,7 @@ public class battlecontroll : Healthhh
     public battlestate state;
     public Button OnAttackButto;
     public GameObject canvas;
+    public Button atacbuton;
 
     Unit playerunit;
     Unit enemyunit;
@@ -25,6 +26,7 @@ public class battlecontroll : Healthhh
     //  canvas = gameObject.findgameobjectwithTag("button");
         state = battlestate.start;
         StartCoroutine(setupBattle());
+        
     }
 
 
@@ -44,18 +46,23 @@ public class battlecontroll : Healthhh
 
    IEnumerator PlayerAtack()
     {
+
+        atacbuton.interactable = false;
         //tton MyButton = canvas.GetComponent<Button>();
-      //MyButton.intera
-       
+        //MyButton.intera
+
         yield return new WaitForSeconds(2f);
         ts.Hurt();
         state = battlestate.enemyturn;
+        
        StartCoroutine( enemyturn());
 
     }
     IEnumerator enemyturn()
     {
         if (state == battlestate.enemyturn)
+         
+           
             
         //TakeDamage(5);
         
@@ -63,19 +70,15 @@ public class battlecontroll : Healthhh
         PL.PlayerHurt();
         // PLayerturn();
         state = battlestate.playerturn;
-
+        atacbuton.interactable = true;
     }
     
-    public void PLayerturn()
-    {
-        state = battlestate.playerturn;
-        OnAttackButton();
-    }
+    
     public void OnAttackButton()
     {
         if (state != battlestate.playerturn)
             return;
-
+        Debug.Log("shit");
         StartCoroutine(PlayerAtack());
 
     }
