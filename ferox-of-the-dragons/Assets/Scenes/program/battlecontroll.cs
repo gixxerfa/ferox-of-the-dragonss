@@ -47,7 +47,7 @@ public class battlecontroll : Healthhh
    IEnumerator PlayerAtack()
     {
 
-        atacbuton.interactable = false;
+        //atacbuton.interactable = false;
         //tton MyButton = canvas.GetComponent<Button>();
         //MyButton.intera
 
@@ -70,7 +70,7 @@ public class battlecontroll : Healthhh
         PL.PlayerHurt();
         // PLayerturn();
         state = battlestate.playerturn;
-        atacbuton.interactable = true;
+        //atacbuton.interactable = true;
     }
     
     
