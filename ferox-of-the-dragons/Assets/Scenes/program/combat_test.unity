@@ -1588,7 +1588,7 @@ MonoBehaviour:
   state: 0
   OnAttackButto: {fileID: 0}
   canvas: {fileID: 0}
-  atacbuton: {fileID: 0}
+  atacbuton: {fileID: 1709051182}
   ts: {fileID: 928787072}
   PL: {fileID: 1598302524}
 --- !u!114 &1598302524
@@ -1846,12 +1846,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbefce0968cd6234ba8529d453809b13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  e1: 0
-  e2: 0
-  e3: 0
-  e4: 0
-  e5: 0
-  e6: 0
   mainmeny: {fileID: 1626257140}
   atackmeny: {fileID: 1416172929}
 --- !u!114 &1709051182
